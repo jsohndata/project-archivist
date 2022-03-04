@@ -10,18 +10,15 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <!-- CSS: Style -->
-<link rel="stylesheet" href="style.css">
-
-<!-- inspo: https://www.codeply.com/p/WGCqYEiPBg -->
-<!-- inspo: https://www.codeply.com/p/Nkp8O77PFS -->
+<link rel="stylesheet" href="style-archivist.css">
 
 
-<title>Bootstrap 5 Modal, onLoad, Blur Background with vanilla Javascript</title>
+<title>Bootstrap 5 Sidebar with Toggle using vanilla Javascript</title>
 </head>
 
 <body>
 <!-- Topbar-->
-<!-- ******************************************* -->
+<!-- ************************************* -->
 <div class="container-fluid bg-primary">
   <div class="row">
     <div class="col-auto ">
@@ -29,12 +26,12 @@
     </div>
   </div>
 </div>
-<!-- ******************************************* -->
+<!-- ************************************* -->
 <!-- /Topbar-->
   
 
 <!-- Sidebar-->
-<!-- ******************************************* -->
+<!-- ************************************* -->
 <div class="container-fluid">
   <div class="row min-vh-100">
     
@@ -46,7 +43,10 @@
       <ul class="nav flex-sm-column flex-row flex-grow-1">
         <li class="nav-item"><a href="#" class="nav-link px-sm-0">Home</a></li>
             
-        <!-- Dropdown: Mobile -->
+<!-- Sidebar > Mobile > Dropdown -->
+<!-- *********************** -->
+
+        <!-- Dropdown 1 -->
         <li class="nav-item dropdown d-sm-none d-md-none"><a href="#" 
           role="button" 
           data-bs-toggle="dropdown"
@@ -62,6 +62,7 @@
           </ul>
         </li>
 
+        <!-- Dropdown 2 -->
         <li class="nav-item dropdown d-sm-none d-md-none"><a href="#" 
           role="button" 
           data-bs-toggle="dropdown"
@@ -76,12 +77,17 @@
             <li><a href="#" class="dropdown-item">Dropdown item 2-3</a></li>
           </ul>
         </li>
+<!-- *********************** -->        
+<!-- Sidebar > Mobile > Dropdown -->
+        
 
 
 
 
+<!-- *********************** -->        
+<!-- Sidebar > Tablet,Desktop > Collapse -->
 
-        <!-- Collapse: Tablet, Desktop  -->
+        <!-- Collapse 1 -->
         <li class="nav-item d-none d-sm-block"><a href="#collapse1" 
           role="button" 
           data-bs-toggle="collapse" 
@@ -97,7 +103,7 @@
           </ul>
         </li>
 
-         <!-- Collapse: Tablet, Desktop  -->
+         <!-- Collapse 2 -->
          <li class="nav-item d-none d-sm-block"><a href="#collapse2" 
           role="button" 
           data-bs-toggle="collapse" 
@@ -116,9 +122,11 @@
       </ul>
       </div>
     </div>
-<!-- /Sidebar -->    
+<!-- ************************************* -->
+<!-- Sidebar > Tablet,Desktop > Collapse -->
 
 <!-- Content -->
+<!-- ************************************* -->
     <div class="col">
       <button type="button" id="sidebarButtonCollapse" class="btn btn-info d-none d-sm-block"><span>Toggle Sidebar</span></button>
 
@@ -135,66 +143,22 @@
       <h3>asdfasdfasd</h3>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
+<!-- ************************************* -->   
 <!-- /Content -->
-
   </div>
 </div>
-<!-- ******************************************* -->
-<!-- /Sidebar-->
 
 
+<!-- JS: Archivist -->
+<script src="script-archivist.js"></script>   
 
+<!-- JS: jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- JS: Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 
+<!-- JS: Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
-
-
-<style>
-  .sidebar-open  { margin-left: 0px;}
-  .sidebar-close { margin-left: -250px; }
-
-  .sidebar-open,
-  .sidebar-close {
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
-    transition-delay: 0.1s;
-  }
-  </style>
-
-
-
-
-<script type="text/javascript">
-
-  const sidebarButtonCollapse = document.querySelector('#sidebarButtonCollapse');
-  const sidebar               = document.querySelector('#sidebar');
-  const sidebarClass          = sidebar.classList;
-
-  
-  sidebarButtonCollapse.onclick = function() {
-    // Open -> Close
-    if ( sidebarClass.contains('sidebar-close')) {
-      sidebarClass.remove('sidebar-close');
-      sidebarClass.toggle('sidebar-open');
-      console.log('toggle => open');
-    }
-
-    // Close -> Open
-    else {
-      sidebarClass.toggle('sidebar-close');
-      console.log('toggle => close');
-    }
-  }
-</script>    
-
-    <!-- JS: jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- JS: Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-
-    <!-- JS: Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-    
 </body></html>
