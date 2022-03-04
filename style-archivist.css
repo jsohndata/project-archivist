@@ -1,0 +1,9 @@
+.sidebar-open  { margin-left: 0px;}
+.sidebar-close { margin-left: -250px; }
+
+.sidebar-open,
+.sidebar-close {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.1s;
+}
