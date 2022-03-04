@@ -13,22 +13,24 @@
 <link rel="stylesheet" href="style-archivist.css">
 
 
-<title>Project Archivisit: Bootstrap 5 sidebar (vertical menu)</title>
+<title>Project Archivist: Bootstrap 5 sidebar (vertical menu)</title>
 </head>
 
 <body>
 <!-- Topbar-->
 <!-- ************************************* -->
-<div class="container-fluid bg-warning">
-  <div class="row">
-    <div class="col-auto">
-		<h1 class="h1">Project Archivisit</h1>
-	  	<p>A Bootstrap 5 sidebar (vertical menu)</p>
-		<p><a href="https://github.com/jsohndata/project-archivist" target="_blank">Get code from Github</a>.</p>
-		
+<header id="topbar">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-auto">
+      <h1 class="h1">Project Archivisit</h1>
+        <p>A Bootstrap 5 sidebar (vertical menu)</p>
+      <p><a href="https://github.com/jsohndata/project-archivist" target="_blank">Get code from Github</a>.</p>
+      
+      </div>
     </div>
   </div>
-</div>
+</header>
 <!-- ************************************* -->
 <!-- /Topbar-->
   
@@ -39,11 +41,12 @@
   <div class="row min-vh-100">
     
     <!-- !! Note: Stick-top: for Mobile, Tablet -->
-    <div class="col-12 col-sm-3 col-xl-2 bg-light sticky-top" id="sidebar">
-      
+    <div class="col-12 col-sm-3 col-xl-2 sticky-top" id="sidebar">
+
       <!-- !! Note: Stick-top: for Desktop -->
       <div class="sticky-top">
-      <ul class="nav flex-sm-column flex-row flex-grow-1">
+      
+      <ul class="nav flex-sm-column p-3">
         <li class="nav-item"><a href="#" class="nav-link px-sm-0">Home</a></li>
             
 <!-- Sidebar > Mobile > Dropdown -->
@@ -106,8 +109,8 @@
           </ul>
         </li>
 
-         <!-- Collapse 2 -->
-         <li class="nav-item d-none d-sm-block"><a href="#collapse2" 
+        <!-- Collapse 2 -->
+        <li class="nav-item d-none d-sm-block"><a href="#collapse2" 
           role="button" 
           data-bs-toggle="collapse" 
           data-target="collapse2"
@@ -130,7 +133,7 @@
 
 <!-- Content -->
 <!-- ************************************* -->
-    <div class="col">
+    <div class="col p-3" id="content">
       <button type="button" id="sidebarButtonCollapse" class="btn btn-info d-none d-sm-block"><span>Toggle Sidebar</span></button>
 
       <h2>title</h2>
