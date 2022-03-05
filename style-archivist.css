@@ -2,7 +2,7 @@
 /* *********************** */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans&display=swap');
 
-#topbar { 
+#header { 
 	background-image: linear-gradient(to right bottom, #333399, #3e49aa, #4b5fb9, #5b75c8, #6c8bd6, #7591e1, #7e98ec, #889ef7, #9494ff, #a687ff, #bd76ff, #d75ffb);
 	background-size: cover;
   	height: 100%; }
