@@ -17,6 +17,6 @@ https://www.codeply.com/p/Nkp8O77PFS
 I am working on cultivating my javascript and bootstrap. Therefore, I welcome any feedback, suggestion, and funny internet meme.
 
 ## Demo
-https://339.blue/bootstrap5-sidebar-vertical-menu
+https://jsohndata.com/bootstrap5-sidebar-vertical-menu/
 
 ##### First Commit: 1646379863
